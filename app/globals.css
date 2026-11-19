@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* font families */
+  --font-sakana: var(--font-sakana), sans-serif;
+  --font-outfit: var(--font-outfit), sans-serif;
+
+  /* colors */
+  --color-primary: #e0e600;
+  --color-secondary: #000000;
+  --color-tertiary: #ffffff;
+  --color-quaternary: #272727;
+  --color-quinary: #1c1c1c;
+  --color-senary: #0b0b0b;
+
+  /* typography */
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-subText: 1.0625rem;
+  --text-subText--line-height: 1.5rem;
+  --text-bold: 1.5rem;
+  --text-bold--line-height: 2rem;
+  --text-bold--font-weight: 800;
+
+  /* spacing 
+  logo to menu'r spacing --- 336
+  menu'r spacing from each other --- 153
+first -- menu--   left 88 +right 88
+  upore 32
+  bottom 156
+  content--- left 80 - right 80  --- upore --- niche
+
+second -- menu--   left 88 +right 88
+  upore 32
+  bottom 
+  content ---left 64 - right-68  --- upore-46 menu'r pore hobe --- niche--56
+
+third -- menu--   left 88 +right 88
+  upore 32
+  bottom 
+  content--- left-120 - right-120  --- upore-120 --- niche-82
+
+  */
+
+  /* gradients */
+  --background-image-hero-radial: radial-gradient(
+    ellipse 60% 55% at 50% 50%,
+    var(--color-quaternary) 0%,
+    var(--color-quinary) 32%,
+    var(--color-senary) 68%,
+    var(--color-secondary) 100%
+  );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: var(--background-image-hero-radial,);
+  --foreground: var(--color-tertiary,);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-outfit), var(--font-sans);
 }
