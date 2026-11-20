@@ -1,13 +1,16 @@
-import React from "react";
 import Header from "../Header/Header";
+import HeroSection from "../HeroSection/HeroSection";
+import Producing from "../Producing/Producing";
+import Products from "../Products/Products";
 
 const EnergyHome = () => {
   return (
-    <div>
+    <section>
       <Header />
-      <h1>Energy Home</h1>
-      <p>Welcome to the Energy Home!</p>
-    </div>
+      <HeroSection />
+      {/* <Producing /> */}
+      {/* <Products /> */}
+    </section>
   );
 };
 

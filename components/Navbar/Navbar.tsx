@@ -1,10 +1,20 @@
-import React from "react";
+import { menuArr } from "@/lib/dynamic";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div>
-      <h3>Navbar</h3>
-    </div>
+    <nav>
+      <ul className="flex gap-28.25 ">
+        {menuArr.map((item) => (
+          <li
+            key={item}
+            className="text-tertiary font-outfit text-base hover:text-primary duration-300"
+          >
+            <Link href="#">{item}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

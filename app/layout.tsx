@@ -16,8 +16,11 @@ const customFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Energy Drink",
+  title: "NiTRO - Energy Drink",
   description: "Boost your energy!",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -26,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${outfitFont.variable} ${customFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className=" min-h-full flex flex-col mx-auto">{children}</body>
     </html>
   );
 }
