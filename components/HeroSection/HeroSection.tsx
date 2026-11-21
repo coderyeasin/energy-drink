@@ -10,7 +10,7 @@ const HeroSection = () => {
     <section className="w-full overflow-y-auto lg:overflow-hidden hero-section py-20 lg:py-26">
       <section className="relative">
         <h1
-          className="font-sakana text-center text-6xl sm:text-8xl md:text-[180px] lg:text-[568.39px] 
+          className="font-sakana text-center text-6xl sm:text-8xl md:text-[180px] lg:md:text-[320px] xl:text-[568.39px] 
            leading-none select-none tracking-[0.03rem] bg-radial from-accent from-40%
       to-primary to-70% bg-clip-text text-transparent "
         >
@@ -19,13 +19,13 @@ const HeroSection = () => {
         <Image
           src="/assets/first-can.png"
           alt="Producing Process"
-          className="static lg:absolute lg:top-1/12 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-1 w-[90%] sm:w-[80%] md:w-[680px] lg:w-275 lg:max-w-none h-auto lg:h-auto object-fill mx-auto"
+          className="static lg:absolute lg:top-1/12 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-1 w-[90%] sm:w-[80%] md:w-170 lg:w-200 xl:w-275 lg:max-w-none h-auto lg:h-auto object-fill mx-auto"
           width={896}
           height={339}
           priority
         />
       </section>
-      <section className="hero-subtitle flex flex-col lg:flex-row justify-between items-center gap-4 px-20 ">
+      <section className="hero-subtitle flex flex-col lg:flex-wrap xl:flex-row justify-between items-center gap-4 px-20 ">
         <div>
           <p className="font-outfit text-base text-tertiary">
             Worem ipsum dolor sit amet, consectetur adipiscing <br /> elit. Nunc

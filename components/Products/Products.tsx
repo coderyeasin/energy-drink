@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Products = () => {
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center lg:flex lg:justify-evenly lg:items-end w-full overflow-hidden px-2 sm:gap-4 lg:gap-0 mx-auto">
+    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center lg:flex lg:justify-evenly lg:items-end w-full overflow-hidden px-2 md:px-14 sm:gap-4 lg:gap-0 mx-auto">
       {prodData.map((product: IProduct, i: number) => {
         const isCenter = i === 2;
         const orderClass = IMAGE_ORDER_[product.id] ?? `order-${product.id}`;
@@ -13,7 +13,7 @@ const Products = () => {
         return (
           <div
             key={product.id}
-            className={`${orderClass} flex shrink-0 flex-col justify-center items-center cursor-pointer py-10 mx-auto lg:py-0 transition-transform duration-300`}
+            className={`${orderClass} flex shrink-0 flex-col justify-center items-center cursor-pointer py-10 lg:px-0 mx-auto lg:py-0 transition-transform duration-300`}
           >
             <div className="relative flex justify-center items-center w-full lg:w-auto">
               <Image
@@ -21,10 +21,11 @@ const Products = () => {
                 alt={product.title}
                 className={` 
                   relative z-10 object-contain 
+                  w-${product.wid} h-${product.hit}
                   `}
                 width={product.wid}
                 height={product.hit}
-                priority={i < 3}
+                priority
               />
 
               <div

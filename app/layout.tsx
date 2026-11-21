@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header/Header";
 
 const outfitFont = Outfit({
   variable: "--font-outfit",
@@ -29,7 +30,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${outfitFont.variable} ${customFont.variable} h-full antialiased`}
     >
-      <body className=" min-h-full flex flex-col mx-auto">{children}</body>
+      <body className=" min-h-full flex flex-col mx-auto">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
