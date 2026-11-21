@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav>
-      <ul className="flex flex-col lg:flex-row gap-10 lg:gap-28.25 ">
+      <ul className="flex flex-col lg:flex-row gap-10 lg:gap-14 xl:gap-28.25 ">
         {menuArr.map((item) => (
           <li
             key={item}

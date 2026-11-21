@@ -10,7 +10,7 @@ const Header = () => {
   const toggleMenu = () => setHamburger((prev) => !prev);
   const closeMenu = () => setHamburger(false);
   return (
-    <header className="relative z-40 w-full flex items-center justify-between py-4 px-4 sm:px-8 lg:py-8 lg:px-22 bg-transparent">
+    <header className="relative z-40 w-full flex items-center justify-between py-4 px-4 sm:px-8 lg:px-22 bg-transparent">
       <Link href="/" onClick={closeMenu}>
         <h2 className="text-primary font-sakana text-[23.25px] tracking-[3%] leading-none">
           NITRO

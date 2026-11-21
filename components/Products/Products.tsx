@@ -1,22 +1,25 @@
+import { IMAGE_ORDER_ } from "@/lib/dynamic";
 import { IProduct } from "@/lib/interface";
 import { prodData } from "@/lib/producData";
 import Image from "next/image";
 
 const Products = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center lg:flex lg:justify-evenly lg:items-end w-full overflow-hidden px-2 sm:gap-4 lg:gap-0 ">
+    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center lg:flex lg:justify-evenly lg:items-end w-full overflow-hidden px-2 sm:gap-4 lg:gap-0 mx-auto">
       {prodData.map((product: IProduct, i: number) => {
         const isCenter = i === 2;
+        const orderClass = IMAGE_ORDER_[product.id] ?? `order-${product.id}`;
+
         return (
           <div
             key={product.id}
-            className="flex shrink-0 flex-col justify-center items-center cursor-pointer transition-transform duration-300"
+            className={`${orderClass} flex shrink-0 flex-col justify-center items-center cursor-pointer py-10 mx-auto lg:py-0 transition-transform duration-300`}
           >
             <div className="relative flex justify-center items-center w-full lg:w-auto">
               <Image
                 src={product.image}
                 alt={product.title}
-                className={`
+                className={` 
                   relative z-10 object-contain 
                   `}
                 width={product.wid}
@@ -42,7 +45,7 @@ const Products = () => {
               />
             </div>
 
-            <div className="mt-4 text-center mr-10 space-y-2">
+            <div className={`${orderClass} mt-4 text-center mr-10 space-y-2`}>
               <div>
                 <h3 className="font-sakana uppercase text-tertiary font-bold">
                   {product.title}
@@ -58,7 +61,7 @@ const Products = () => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 

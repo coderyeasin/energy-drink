@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const Producing = () => {
   return (
-    <section className="w-full overflow-hidden producing-section relative flex flex-col lg:flex-row justify-between items-center gap-8 px-20 py-10">
+    <section className="w-full producing-section relative flex flex-col lg:flex-row justify-between items-center lg:gap-8 px-10 py-10 lg:pb-10 overflow-hidden ">
       <div className="z-0 order-3 lg:order-1">
         <Image
           src="/assets/HeroImage.png"
           alt="Producing Process"
-          className="lg:h-195 object-contain"
+          className="lg:w-[700] lg:h-185 object-left"
           width={884}
           height={920}
           priority
@@ -17,7 +17,7 @@ const Producing = () => {
         <Image
           src="/assets/second-can.png"
           alt="Producing Process"
-          className="lg:absolute lg:left-54 lg:top-48 z-0 lg:w-[1600px] object-fill"
+          className="lg:absolute lg:-translate-x-4/12 xl:-translate-x-7/12 lg:-translate-y-5/12 lg:w-[1600px] object-fill"
           width={1488}
           height={565}
           priority
@@ -35,7 +35,7 @@ const Producing = () => {
     lg:text-[170px]
     leading-none
     tracking-[0.03em]
-    text-center lg:text-left
+     lg:text-justify
         "
         >
           Since 2002 <br />
