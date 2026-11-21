@@ -1,13 +1,10 @@
-import React from "react";
-import Header from "../Header/Header";
+import AnimateContents from "../AnimateContents/AnimateContents";
 
 const EnergyHome = () => {
   return (
-    <div>
-      <Header />
-      <h1>Energy Home</h1>
-      <p>Welcome to the Energy Home!</p>
-    </div>
+    <section className="w-full ">
+      <AnimateContents />
+    </section>
   );
 };
 
