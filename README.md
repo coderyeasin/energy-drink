@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ NITRO - 3D Energy Drink Web App - [Live](https://energy-drink-6mgl.vercel.app/) 🚀
 
-## Getting Started
+**NITRO** is a modern, responsive energy drink web application built with **Next.js, TypeScript, Tailwind CSS, and Framer Motion**.  
+It features a fixed radial-gradient background, fixed navbar, animated content sections, custom typography, and a bold 3D-inspired product experience.
 
-First, run the development server:
+## 📌 Overview
+
+NITRO is a Figma-to-code landing page designed to showcase an energy drink brand with a premium, high-energy visual style.  
+The layout uses a fixed radial background, smooth scroll animations, and responsive sections to create an engaging user experience across all devices.
+
+## ✨ Key Features
+
+- Fully responsive design for mobile, tablet, and desktop
+- Fixed navbar with smooth navigation experience
+- Fixed radial-gradient background for a modern 3D feel
+- Animated content sections using Framer Motion
+- Custom fonts and Figma-based typography
+- Bold, energetic, and premium visual theme
+- Reusable and scalable React components
+- Clean TypeScript-based architecture
+- Figma-to-code implementation
+
+## 🛠️ Tech Stack
+
+| Technology    | Purpose                    |
+| ------------- | -------------------------- |
+| Next.js       | UI development             |
+| TypeScript    | Type-safe development      |
+| Tailwind CSS  | Utility-first styling      |
+| Framer Motion | Animations and transitions |
+| React Icons   | UI icons                   |
+| Figma         | UI/UX design reference     |
+
+## 🎨 Design & Typography
+
+The UI follows a Figma design system with:
+
+- Custom Sakana fonts
+- Bold headings and clean body typography
+- Consistent spacing, colors, and visual hierarchy
+- Dark, energetic theme with radial gradient background
+- Smooth, subtle animations for better user experience
+
+## 📱 Responsiveness
+
+NITRO is fully responsive and optimized for:
+
+- Mobile devices
+- Tablets
+- Laptops
+- Large desktop screens
+
+## 🚀 Getting Started
+
+### Installation
 
 ```bash
+git clone [https://github.com/coderyeasin/energy-drink.git]
+cd energy-drink
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗️ Production Build
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── AnimateContents
+│   ├── Header.tsx
+│   ├── HeroSection.tsx
+│   ├── Produce.tsx
+│   └── Products.tsx
+└── lib/
+    └── utils.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎬 Animations
 
-## Deploy on Vercel
+Framer Motion is used for:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Fade-in and slide-in effects
+- Scroll-triggered animations
+- Hover interactions
+- Smooth Animation for images
+- Smooth content transitions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Future Improvements
+
+- Product detail pages
+- Cart and checkout system
+- CMS integration
+- Product filtering
+- Real 3D interaction with Three.js

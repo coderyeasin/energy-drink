@@ -1,6 +1,6 @@
 "use client";
 import { animateCompo } from "@/lib/dynamic";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 const AnimateContents = () => {
@@ -8,7 +8,7 @@ const AnimateContents = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((pre) => (pre + 1) % animateCompo.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);

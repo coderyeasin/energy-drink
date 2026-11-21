@@ -1,9 +1,29 @@
 import Image from "next/image";
+import { motion } from "motion/react";
+import { sectionContainerVariants, smoothEase } from "@/lib/animations";
 
 const Producing = () => {
   return (
-    <section className="w-full producing-section relative flex flex-col lg:flex-row justify-between items-center lg:gap-8 px-10 py-10 lg:pb-10 overflow-hidden ">
-      <div className="z-0 order-3 lg:order-1">
+    <motion.section
+      variants={sectionContainerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="w-full producing-section relative flex flex-col lg:flex-row justify-between items-center lg:gap-8 px-10 py-10 lg:pb-10 overflow-x-clip perspective-distant"
+    >
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, x: -45, rotateY: 12, scale: 0.95 },
+          visible: {
+            opacity: 1,
+            x: 0,
+            rotateY: 0,
+            scale: 1,
+            transition: { duration: 0.7, ease: smoothEase },
+          },
+        }}
+        className="relative z-0 order-3 lg:order-1 w-full lg:w-auto flex justify-center"
+      >
         <Image
           src="/assets/HeroImage.png"
           alt="Producing Process"
@@ -12,38 +32,62 @@ const Producing = () => {
           height={920}
           priority
         />
-      </div>
-      <div className="z-10 order-2 lg:order-2">
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={{
+          hidden: { opacity: 0, y: -45, scale: 0.88, rotateZ: -4 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            rotateZ: 0,
+            transition: {
+              type: "spring",
+              stiffness: 115,
+              damping: 16,
+              delay: 0.15,
+            },
+          },
+        }}
+        whileHover={{ y: -8, scale: 1.04 }}
+        className="relative lg:absolute z-10 order-2 lg:order-2 lg:-translate-x-4/12 xl:translate-x-1/12 lg:translate-y-2/12 lg:w-[1600px]"
+      >
         <Image
           src="/assets/second-can.png"
           alt="Producing Process"
-          className="lg:absolute lg:-translate-x-4/12 xl:-translate-x-7/12 lg:-translate-y-5/12 lg:w-[1600px] object-fill"
+          className="w-full h-auto object-fill"
           width={1488}
           height={565}
           priority
         />
-      </div>
-      <div className="z-20 order-1 lg:order-3">
+      </motion.div>
+
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, x: 40, rotateY: -10 },
+          visible: {
+            opacity: 1,
+            x: 0,
+            rotateY: 0,
+            transition: { duration: 0.7, delay: 0.25, ease: smoothEase },
+          },
+        }}
+        className="z-20 order-1 lg:order-3 relative w-full lg:w-auto text-center lg:text-left"
+      >
         <p
-          className="
-         w-full lg:w-[594px]
-    h-auto lg:h-[688px]
-    font-sakana text-primary
-    text-[52px]
-    sm:text-[65px]
-    md:text-[85px]
-    lg:text-[170px]
-    leading-none
-    tracking-[0.03em]
-     lg:text-justify
+          className="w-full lg:w-148.5 h-auto lg:h-172 font-sakana text-primary text-[52px] sm:text-[65px] md:text-[85px] lg:text-[170px] leading-none tracking-[0.03em] lg:text-justify
         "
         >
           Since 2002 <br />
           <span className="lg:hidden">producing</span>
           <span className="hidden lg:inline">prod ucing</span>
         </p>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
