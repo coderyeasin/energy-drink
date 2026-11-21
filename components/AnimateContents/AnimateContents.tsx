@@ -1,7 +1,6 @@
 "use client";
 import { animateCompo } from "@/lib/dynamic";
 import { AnimatePresence, motion } from "framer-motion";
-// import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 const AnimateContents = () => {
