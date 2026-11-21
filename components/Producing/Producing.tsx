@@ -26,16 +26,7 @@ const Producing = () => {
       <div className="z-20 order-1 lg:order-3">
         <p
           className="
-         w-full lg:w-[594px]
-    h-auto lg:h-[688px]
-    font-sakana text-primary
-    text-[52px]
-    sm:text-[65px]
-    md:text-[85px]
-    lg:text-[170px]
-    leading-none
-    tracking-[0.03em]
-     lg:text-justify
+         w-full lg:w-148.5 h-auto lg:h-172 font-sakana text-primary text-[52px] sm:text-[65px] md:text-[85px] lg:text-[170px] leading-none tracking-[0.03em] lg:text-justify
         "
         >
           Since 2002 <br />
