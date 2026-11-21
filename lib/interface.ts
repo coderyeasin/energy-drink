@@ -11,6 +11,4 @@ export interface IProduct {
   image: string;
   wid: number;
   hit: number;
-  glowWid: number;
-  glowHit: number;
 }

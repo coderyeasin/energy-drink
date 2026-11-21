@@ -7,9 +7,9 @@ const EnergyHome = () => {
   return (
     <section>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       {/* <Producing /> */}
-      {/* <Products /> */}
+      <Products />
     </section>
   );
 };

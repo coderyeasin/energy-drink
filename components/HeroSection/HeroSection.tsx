@@ -1,32 +1,26 @@
 import CustomButton from "@/Shared/CustomButton";
 import Image from "next/image";
-import React from "react";
-import {
-  GrFacebookOption,
-  GrInstagram,
-  GrLinkedin,
-  GrTwitter,
-  GrX,
-} from "react-icons/gr";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { GrFacebookOption } from "react-icons/gr";
 
 const HeroSection = () => {
   return (
     <section className="hero-section py-26">
       <section className="relative">
-        {/* text-[568.39px] */}
         <h1
-          className="font-sakana w-fit text-[500px] leading-none tracking-[0.03em] 
-      bg-radial from-accent 
-      to-primary bg-clip-text text-transparent select-none text-center"
+          className="font-sakana text-center text-[568.39px] leading-none select-none tracking-[0.03rem] bg-radial from-accent from-40%
+      to-primary to-70% bg-clip-text text-transparent "
         >
           NITRO
         </h1>
         <Image
-          src="/assets/Can (1).png"
+          src="/assets/first-can.png"
           alt="Producing Process"
-          className="absolute top-1/12 left-2/12 border-2 border-red-700"
-          width={900}
-          height={340}
+          className="absolute top-1/12 left-1/2 -translate-x-1/2 translate-y-0.5/12 w-275 object-fill"
+          width={896}
+          height={339}
           priority
         />
       </section>
@@ -46,10 +40,10 @@ const HeroSection = () => {
           </CustomButton>
         </div>
         <div className="flex gap-8">
-          <GrFacebookOption className="h-10.5 w-10.5 rounded-full ring-2 ring-primary text-primary" />
-          <GrInstagram className="h-10.5 w-10.5 rounded-full ring-2 ring-primary text-primary" />
-          <GrTwitter className="h-10.5 w-10.5 rounded-full ring-2 ring-primary text-primary" />
-          <GrLinkedin className="h-10.5 w-10.5 rounded-full ring-2 ring-primary text-primary" />
+          <GrFacebookOption className="h-10.5 w-10.5 p-2 rounded-full ring-2 ring-primary text-primary hover:bg-primary hover:text-secondary cursor-pointer" />
+          <FaInstagram className="h-10.5 w-10.5 p-2 rounded-full ring-2 ring-primary text-primary hover:bg-primary hover:text-secondary cursor-pointer" />
+          <FaXTwitter className="h-10.5 w-10.5 p-2 rounded-full ring-2 ring-primary text-primary hover:bg-primary hover:text-secondary cursor-pointer" />
+          <BiLogoLinkedin className="h-10.5 w-10.5 p-2 rounded-full ring-2 ring-primary text-primary hover:bg-primary hover:text-secondary cursor-pointer" />
         </div>
       </section>
     </section>
