@@ -5,11 +5,11 @@ import Products from "../Products/Products";
 
 const EnergyHome = () => {
   return (
-    <section>
+    <section className="w-full h-auto">
       <Header />
-      {/* <HeroSection /> */}
-      {/* <Producing /> */}
-      <Products />
+      <HeroSection />
+      {/* <Producing />
+      <Products /> */}
     </section>
   );
 };

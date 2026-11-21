@@ -6,7 +6,7 @@ const CustomButton = ({ children, CustomClass, ...props }: ICustomButton) => {
     <button
       {...props}
       className={cn(
-        "bg-primary text-secondary font-outfit text-base font-medium px-11.25 py-2.5 cursor-pointer transition-colors duration-300",
+        "bg-primary text-secondary font-outfit text-base font-medium px-5 md:px-11.25 py-2.5 cursor-pointer transition-colors duration-300",
         CustomClass,
       )}
     >
