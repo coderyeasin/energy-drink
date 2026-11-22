@@ -1,4 +1,4 @@
-# ⚡ NITRO - 3D Energy Drink Web App - [Live](https://energy-drink-6mgl.vercel.app/) 🚀
+# ⚡ NITRO - 3D Energy Drink Web App - [Live](https://energy-drink-6mgl.vercel.app/) [3D Live-2](https://energy-drink-mc14.vercel.app/)🚀
 
 **NITRO** is a modern, responsive energy drink web application built with **Next.js, TypeScript, Tailwind CSS, and Framer Motion**.  
 It features a fixed radial-gradient background, fixed navbar, animated content sections, custom typography, and a bold 3D-inspired product experience.
