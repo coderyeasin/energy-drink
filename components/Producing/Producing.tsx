@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { motion } from "motion/react";
-import { sectionContainerVariants, smoothEase } from "@/lib/animations";
+import {
+  heroCanVariants,
+  sectionContainerVariants,
+  smoothEase,
+} from "@/lib/animations";
 
 const Producing = () => {
   return (
@@ -13,13 +17,21 @@ const Producing = () => {
     >
       <motion.div
         variants={{
-          hidden: { opacity: 0, x: -45, rotateY: 12, scale: 0.95 },
+          hidden: {
+            opacity: 0,
+            x: -140,
+            rotateY: 14,
+            scale: 0.94,
+          },
           visible: {
             opacity: 1,
             x: 0,
             rotateY: 0,
             scale: 1,
-            transition: { duration: 0.7, ease: smoothEase },
+            transition: {
+              duration: 1,
+              ease: smoothEase,
+            },
           },
         }}
         className="relative z-0 order-3 lg:order-1 w-full lg:w-auto flex justify-center"
@@ -35,45 +47,37 @@ const Producing = () => {
       </motion.div>
 
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={{
-          hidden: { opacity: 0, y: -45, scale: 0.88, rotateZ: -4 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            rotateZ: 0,
-            transition: {
-              type: "spring",
-              stiffness: 115,
-              damping: 16,
-              delay: 0.15,
-            },
-          },
-        }}
-        whileHover={{ y: -8, scale: 1.04 }}
+        variants={heroCanVariants}
+        whileHover={{ scale: 1.03, rotateZ: 2 }}
         className="relative lg:absolute z-10 order-2 lg:order-2 lg:-translate-x-4/12 xl:translate-x-1/12 lg:translate-y-2/12 lg:w-[1600px]"
       >
-        <Image
-          src="/assets/second-can.png"
-          alt="Producing Process"
-          className="w-full h-auto object-fill"
-          width={1488}
-          height={565}
-          priority
-        />
+        <motion.div
+          animate={{ y: [0, -10, 0], rotateZ: [0, 1.2, 0] }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <Image
+            src="/assets/second-can.png"
+            alt="Producing Process"
+            className="w-full h-auto object-fill"
+            width={1488}
+            height={565}
+            priority
+          />
+        </motion.div>
       </motion.div>
 
       <motion.div
         variants={{
-          hidden: { opacity: 0, x: 40, rotateY: -10 },
+          hidden: { opacity: 0, x: 140, rotateY: -8 },
           visible: {
             opacity: 1,
             x: 0,
             rotateY: 0,
-            transition: { duration: 0.7, delay: 0.25, ease: smoothEase },
+            transition: {
+              duration: 1,
+              delay: 0.25,
+              ease: smoothEase,
+            },
           },
         }}
         className="z-20 order-1 lg:order-3 relative w-full lg:w-auto text-center lg:text-left"

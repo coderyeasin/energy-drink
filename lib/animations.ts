@@ -67,9 +67,16 @@ export const depthTextVariants: Variants = {
 };
 
 export const heroCanVariants: Variants = {
-  hidden: { opacity: 0, y: -75, scale: 0.88, rotateZ: -6 },
+  hidden: {
+    opacity: 0,
+    x: "-110vw",
+    y: 0,
+    scale: 0.92,
+    rotateZ: -6,
+  },
   visible: {
     opacity: 1,
+    x: 0,
     y: 0,
     scale: 1,
     rotateZ: 0,
@@ -78,6 +85,7 @@ export const heroCanVariants: Variants = {
       stiffness: 110,
       damping: 16,
       mass: 0.9,
+      delay: 1,
     },
   },
 };
